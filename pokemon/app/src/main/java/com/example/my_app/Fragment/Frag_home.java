@@ -86,7 +86,7 @@ public class Frag_home extends Fragment {
         View view = inflater.inflate(R.layout.frag_home, container, false);
 
         // 设置背景颜色为 #123456
-        int color = Color.parseColor("#FFF95E");
+        int color = Color.parseColor("#FFFFC0");
         view.setBackgroundColor(color);
 
         return view;
