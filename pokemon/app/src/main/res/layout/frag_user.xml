@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#66c9c9c9"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="我的信息"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/picture"
+            android:background="#80EDAC"
+            style="@style/relativelayout">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="头像"
+                android:textSize="30dp" />
+
+            <ImageView
+                android:id="@+id/user_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/set_photo"
+                android:background="#c9c9c9" />
+
+            <ImageView
+                android:id="@+id/set_photo"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/forward" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/username"
+            style="@style/relativelayout"
+            android:background="#00AB6B">
+
+            <TextView
+                android:id="@+id/view1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="呢称"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="user"
+                android:textSize="25dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/phone"
+            android:background="#80EDAC"
+            style="@style/relativelayout">
+
+            <TextView
+                android:id="@+id/view2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="电话"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/user_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="xxxxxxxxxx"
+                android:textSize="25dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/sex"
+            style="@style/relativelayout"
+            android:background="#00AB6B">
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="性别"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/user_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="sex"
+                android:textSize="25dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/birthday"
+            android:background="#80EDAC"
+            style="@style/relativelayout">
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="年龄"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/user_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="age"
+                android:textSize="25dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:background="#ffffff"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical">-->
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/holiday"-->
+    <!--            style="@style/relativelayout">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/text8"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:text="状态"-->
+    <!--                android:textSize="30dp" />-->
+
+    <!--            <Spinner-->
+    <!--                android:id="@+id/spinner_holiday"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentRight="true"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:spinnerMode="dialog"/>-->
+    <!--        </RelativeLayout>-->
+
+    <!--        <TextView style="@style/line"/>-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/hobby"-->
+    <!--            style="@style/relativelayout">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/text9"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:text="爱好"-->
+    <!--                android:textSize="30dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/view9"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:text="hobby"-->
+    <!--                android:layout_alignParentRight="true"-->
+    <!--                android:textSize="25dp"/>-->
+
+
+    <!--        </RelativeLayout>-->
+
+
+    <!--    </LinearLayout>-->
+
+</LinearLayout>
