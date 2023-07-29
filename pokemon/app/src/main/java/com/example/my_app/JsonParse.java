@@ -19,9 +19,7 @@ public class JsonParse {
             instance = new JsonParse();
 
         }
-
         return instance;
-
     }
 
     public List<News_bean> getNewsList(String json) {
