@@ -14,6 +14,7 @@ import java.lang.*;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -23,6 +24,7 @@ import com.example.my_app.Fragment.Frag_video;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String PAGE_USER = "page_user";
 
     private ImageView home;
     private ImageView video;
@@ -149,6 +151,19 @@ public class MainActivity extends AppCompatActivity {
         weather =findViewById(R.id.weather);
         turn_frag(home);
 
+        /*
+         * 实现登录页面返回user页面
+         */
+        String page_login = getIntent().getStringExtra("page_user");
+        if(page_login != null){
+            if (page_login.equals(PAGE_USER)){
+                turn_frag(user);
+            }
+        }
+
+        /*
+         *  页面跳转
+         */
         if (bundle != null) {
             if (bundle.getInt("flag") == 1) {
                 addnews = "{'title':'" + bundle.getString("title") + "'," +

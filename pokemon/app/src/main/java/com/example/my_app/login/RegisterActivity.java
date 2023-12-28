@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.my_app.MainActivity;
 import com.example.my_app.R;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -60,6 +61,15 @@ public class RegisterActivity extends AppCompatActivity {
         phone=(EditText) findViewById(R.id.phoneRegister);
         sex=(RadioGroup) findViewById(R.id.sexRegister);
         register=(Button) findViewById(R.id.Register);
+
+        findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                intent.putExtra("page_login", LoginActivity.PAGE_LOGIN);
+                startActivity(intent);
+            }
+        });
     }
 
 }

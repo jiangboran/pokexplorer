@@ -9,12 +9,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.example.my_app.Fragment.Frag_home;
+import com.example.my_app.Fragment.Frag_user;
+import com.example.my_app.Fragment.Frag_video;
 import com.example.my_app.MainActivity;
 
 import com.example.my_app.R;
+import com.example.my_app.WeatherActivity;
+
+import java.lang.annotation.Target;
 
 public class LoginActivity extends AppCompatActivity {
+
+    public static final String PAGE_LOGIN = "page_login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         password=(EditText) findViewById(R.id.password);
         login=(Button) findViewById(R.id.login);
         register=(Button) findViewById(R.id.register);
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,5 +76,17 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.putExtra("page_user", MainActivity.PAGE_USER);
+                startActivity(intent);
+            }
+        });
     }
+
+
+
 }
