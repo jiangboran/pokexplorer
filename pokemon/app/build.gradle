@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.pokexplorer"
+        applicationId "com.example.my_app"
         minSdk 21
         targetSdk 32
         versionCode 1

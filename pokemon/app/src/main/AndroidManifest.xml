@@ -28,7 +28,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.pokexplorer"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         android:background="@drawable/head"
         tools:targetApi="31">
         <activity
@@ -51,6 +51,9 @@
             android:exported="false" />
         <activity
             android:name="com.example.my_app.WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.my_app.ReadActivity"
             android:exported="false" />
         <activity
             android:name="com.example.my_app.MainActivity"

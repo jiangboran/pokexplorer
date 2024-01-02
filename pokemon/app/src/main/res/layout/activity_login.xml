@@ -7,10 +7,18 @@
     android:background="@drawable/pokemonbackground1"
     tools:context=".login.LoginActivity">
 
+    <include
+        layout="@layout/topbar"
+        android:id="@+id/top"
+        app:layout_constraintBottom_toTopOf="@id/main"/>
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
             android:layout_width="match_parent"
